@@ -80,76 +80,76 @@ The initial state is set to `user`.
 
 * state2
 	* Input: "南港"
-		* Go to nangang
+		* Go to `nangang`
 		* Reply: "高鐵南港站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/2f940836-cedc-41ef-8e28-c2336ac8fe68"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 
 	* Input: "台北"
-		* Go to taipei
+		* Go to `taipei`
 		* Reply: "高鐵台北站\nhttp://www.thsrc.com.tw/tw/StationInfo/prospect/977abb69-413a-4ccf-a109-0272c24fd490"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 	
 	* Input: "板橋"
-		* Go to banqiao
+		* Go to `banqiao`
 		* Reply: "高鐵板橋站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/e6e26e66-7dc1-458f-b2f3-71ce65fdc95f"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 
 	* Input: "桃園"
-		* Go to taoyuan
+		* Go to `taoyuan`
 		* Reply: "高鐵桃園站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/fbd828d8-b1da-4b06-a3bd-680cdca4d2cd"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 	
 	* Input: "新竹"
-		* Go to hsinchu
+		* Go to `hsinchu`
 		* Reply: "高鐵新竹站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/a7a04c89-900b-4798-95a3-c01c455622f4"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 
 	* Input: "苗栗"
-		* Go to miaoli
+		* Go to `miaoli`
 		* Reply: "高鐵苗栗站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/e8fc2123-2aaf-46ff-ad79-51d4002a1ef3"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 	
 	* Input: "台中"
-		* Go to taichung
+		* Go to `taichung`
 		* Reply: "高鐵台中站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/3301e395-46b8-47aa-aa37-139e15708779"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 
 	* Input: "彰化"
-		* Go to chunghua
+		* Go to `chunghua`
 		* Reply: "高鐵彰化站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/38b8c40b-aef0-4d66-b257-da96ec51620e"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 
 	*Input: "雲林"
-		* Go to yunlin
+		* Go to `yunlin`
 		* Reply: "高鐵雲林站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/5f4c7bb0-c676-4e39-8d3c-f12fc188ee5f"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 
 	* Input: "嘉義"
-		* Go to chiayi
+		* Go to `chiayi`
 		* Reply: "高鐵嘉義站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/60831846-f0e4-47f6-9b5b-46323ebdcef7"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 
 	* Input: "台南"
-		* Go to taipei
+		* Go to `taipei`
 		* Reply: "高鐵台南站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/9c5ac6ca-ec89-48f8-aab0-41b738cb1814"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 
 	* Input: "左營"
-		* Go to zuoying
+		* Go to `zuoying`
 		* Reply: "高鐵左營站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/f2519629-5973-4d08-913b-479cce78a356"
 		* Reply: "有需要其他幫忙再跟我說～"
-		* Go back to user
+		* Go back to `user`
 
 ## Reference
 * [TOC-Project-2017](https://github.com/Lee-W/TOC-Project-2017) ❤️ [@Lee-W](https://github.com/Lee-W)
