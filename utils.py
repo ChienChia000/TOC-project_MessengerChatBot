@@ -1,9 +1,10 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 
 
 GRAPH_URL = "https://graph.facebook.com/v2.6"
-ACCESS_TOKEN = "EAAOw4xfE6L0BAH6wQavvSkE97y4cGwyF7WvRebyFKgIHV4sxQXnk5XRBZCuYSwD1ZAVeHxGmwk9HP2RK9gGZCDxGyLQwnYzZAdTAu5xoewkdKxWSajBGWYbI0ItoZCLKtNEzghpIWLpzFjcLs7D9RLVOEMhSaW08hKodnwmv6T27cRDhDHYfZC"
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
 
 def send_text_message(id, text):
     url = "{0}/me/messages?access_token={1}".format(GRAPH_URL, ACCESS_TOKEN)

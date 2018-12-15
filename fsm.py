@@ -3,7 +3,7 @@ from transitions.extensions import GraphMachine
 from utils import send_text_message
 from utils import THSRparse
 
-print("\n\n\n\n\n\n\n\n\nfsm.py start\n")
+print("\n\n\n\nfsm.py start\n")
 
 theDay=''
 startStation=''
