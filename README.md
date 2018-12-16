@@ -18,6 +18,10 @@ pip install -r requirements.txt
 
 * beautifulsoup4 (For parse website data)
 
+## Feature
+* deploy on Heroku
+* parse data from [台灣高鐵](http://www.thsrc.com.tw/index.html)
+
 ## Finite State Machine
 ![fsm](./img/fsm.png)
 
