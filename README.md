@@ -35,7 +35,7 @@ The initial state is set to `user`.
 		* Go to `menu`
 		* Reply: "哈囉～"
 		* Reply: "我是高鐵服務機器人！"
-		* Reply: "我有以下功能\n●時刻表查詢\n●車站資訊\n●官方網站\n"
+		* Reply: "我有以下功能\n●時刻表查詢\n●車站資訊\n●車廂介紹\n●官方網站\n"
 		* Reply: "需要幫你什麼忙呢？？"
 		* Go back to `user`
 
@@ -47,6 +47,11 @@ The initial state is set to `user`.
 	* Input: "車站資訊"
 		* Go to `state2`
 		* Reply: "想要查詢哪個車站呢？"
+
+	* Input: "車廂介紹"
+		* Go to `cartype`
+		* Reply: "高鐵車廂分成\n●標準車廂\n●商務車廂\n●無障礙車廂\n●自由坐車廂"
+		* Reply: "請問想查詢哪一種呢？"
 
 	* Input: "官方網站"
 		* Go to `web`
@@ -152,6 +157,35 @@ The initial state is set to `user`.
 	* Input: "左營"
 		* Go to `zuoying`
 		* Reply: "高鐵左營站\nhttp://www.thsrc.com.tw/tw/StationInfo/Prospect/f2519629-5973-4d08-913b-479cce78a356"
+		* Reply: "有需要其他幫忙再跟我說～"
+		* Go back to `user`
+
+* cartype
+	* Input: "標準車廂"
+		* Go to `standard`
+		* Reply: "標準車廂示意圖"
+		* Reply: "https://i.imgur.com/blnsfxk.png"
+		* Reply: "有需要其他幫忙再跟我說～"
+		* Go back to `user`
+
+	* Input: "商務車廂"
+		* Go to `business`
+		* Reply: "商務車廂示意圖"
+		* Reply: "https://i.imgur.com/WEQz5rd.png"
+		* Reply: "有需要其他幫忙再跟我說～"
+		* Go back to `user`
+
+	* Input: "無障礙車廂"
+		* Go to `disable`
+		* Reply: "無障礙車廂示意圖"
+		* Reply: "https://i.imgur.com/wx8CV51.png"
+		* Reply: "有需要其他幫忙再跟我說～"
+		* Go back to `user`
+
+	* Input: "自由坐車廂"
+		* Go to `free`
+		* Reply: "自由坐車廂示意圖"
+		* Reply: "https://i.imgur.com/no58YrA.png"
 		* Reply: "有需要其他幫忙再跟我說～"
 		* Go back to `user`
 
