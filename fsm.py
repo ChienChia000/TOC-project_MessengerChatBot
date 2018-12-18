@@ -2,6 +2,7 @@ from transitions.extensions import GraphMachine
 
 from utils import send_text_message
 from utils import THSRparse
+from utils import send_image_url
 
 print("\n\n\n\nfsm.py start\n")
 
@@ -27,141 +28,241 @@ class TocMachine(GraphMachine):
     print("\n\nout\n",payload,"\n\n")
 
     def is_going_to_menu(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '嗨'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_state1(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '時刻表查詢'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_date(self, event):
-        #print(event['message']['text'])
-        #if event.get("message"):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             if text == '輸入格式為\nYYYY/MM/DD':
                 return False
             elif "/" in text:
                 return True
-        return False
-        #if :
-        #    
-        #    return text.lower() == 'go to state1'
+        else:
+            sender_id = event['sender']['id']
+            send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_start(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             if text == '那要從哪一站出發呢？':
                 return False
             elif "出發" in text:
                 return True
-        return False
+        else:
+            sender_id = event['sender']['id']
+            send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_end(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             if text == '那要搭到哪一站呢？':
                 return False
             elif "搭到" in text:
                 return True
-        return False
+        else:
+            sender_id = event['sender']['id']
+            send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_time(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             if text == '輸入格式為\nhh:mm\n記得要使用半形的冒號唷～':
                 return False
             elif ":" in text:
                 return True
-        return False
+        else:
+            sender_id = event['sender']['id']
+            send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_state2(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '車站資訊'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_nangang(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '南港'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_taipei(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '台北'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_banqiao(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '板橋'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_taoyuan(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '桃園'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_hsinchu(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '新竹'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_miaoli(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '苗栗'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_taichung(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '台中'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_chunghua(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '彰化'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_yunlin(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '雲林'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_chiayi(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '嘉義'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_tainan(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '台南'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_zuoying(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '左營'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def is_going_to_web(self, event):
-        if event.get("message"):
+        if event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '官方網站'
-        return False
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
+
+    def is_going_to_cartype(self, event):
+        if event['message'].get("text"):
+            text = event['message']['text']
+            return text.lower() == '車廂介紹'
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
+
+    def is_going_to_standard(self, event):
+        if event['message'].get("text"):
+            text = event['message']['text']
+            return text.lower() == '標準車廂'
+        else:
+            sender_id = event['sender']['id']
+            send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
+
+    def is_going_to_business(self, event):
+        if event['message'].get("text"):
+            text = event['message']['text']
+            return text.lower() == '商務車廂'
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
+
+    def is_going_to_disable(self, event):
+        if event['message'].get("text"):
+            text = event['message']['text']
+            return text.lower() == '無障礙車廂'
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
+
+    def is_going_to_free(self, event):
+        if event['message'].get("text"):
+            text = event['message']['text']
+            return text.lower() == '自由坐車廂'
+        else:
+            sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
+            return False
 
     def on_enter_menu(self, event):
         print("I'm entering menu")
@@ -169,7 +270,7 @@ class TocMachine(GraphMachine):
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "哈囉～")
         responese = send_text_message(sender_id, "我是高鐵服務機器人！")
-        responese = send_text_message(sender_id, "我有以下功能\n●時刻表查詢\n●車站資訊\n●官方網站\n")
+        responese = send_text_message(sender_id, "我有以下功能\n●時刻表查詢\n●車站資訊\n●車廂介紹\n●官方網站")
         responese = send_text_message(sender_id, "需要幫你什麼忙呢？？")
         self.go_back()
 
@@ -488,3 +589,66 @@ class TocMachine(GraphMachine):
     def on_exit_web(self):
         print('Leaving web')
 
+    #Car Type
+    def on_enter_cartype(self, event):
+        print("I'm entering cartype")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "高鐵車廂分成\n●標準車廂\n●商務車廂\n●無障礙車廂\n●自由坐車廂")
+        responese = send_text_message(sender_id, "請問想查詢哪一種呢？")
+        #self.go_back()
+
+    def on_exit_cartype(self, event):
+        print('Leaving cartype')
+
+    #Standard
+    def on_enter_standard(self, event):
+        print("I'm entering standard")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "標準車廂示意圖")
+        responese = send_image_url(sender_id, "https://i.imgur.com/blnsfxk.png")
+        responese = send_text_message(sender_id, "有需要其他幫忙再跟我說～")
+        self.go_back()
+
+    def on_exit_standard(self):
+        print('Leaving standard')
+
+    #Business
+    def on_enter_business(self, event):
+        print("I'm entering business")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "商務車廂示意圖")
+        responese = send_image_url(sender_id, "https://i.imgur.com/WEQz5rd.png")
+        responese = send_text_message(sender_id, "有需要其他幫忙再跟我說～")
+        self.go_back()
+
+    def on_exit_business(self):
+        print('Leaving business')
+
+    #Disable
+    def on_enter_disable(self, event):
+        print("I'm entering disable")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "無障礙車廂示意圖")
+        responese = send_image_url(sender_id, "https://i.imgur.com/wx8CV51.png")
+        responese = send_text_message(sender_id, "有需要其他幫忙再跟我說～")
+        self.go_back()
+
+    def on_exit_disable(self):
+        print('Leaving disable')
+
+    #Free
+    def on_enter_free(self, event):
+        print("I'm entering free")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "自由坐車廂示意圖")
+        responese = send_image_url(sender_id, "https://i.imgur.com/no58YrA.png")
+        responese = send_text_message(sender_id, "有需要其他幫忙再跟我說～")
+        self.go_back()
+
+    def on_exit_free(self):
+        print('Leaving free')

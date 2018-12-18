@@ -29,7 +29,12 @@ machine = TocMachine(
         'zuoying',
         'chiayi',
         'tainan',
-        'web'
+        'web',
+        'cartype',
+        'standard',
+        'business',
+        'disable',
+        'free'
     ],
     transitions=[
         {
@@ -153,6 +158,36 @@ machine = TocMachine(
             'conditions': 'is_going_to_web'
         },
         {
+            'trigger': 'advance',
+            'source': 'user',
+            'dest': 'cartype',
+            'conditions': 'is_going_to_cartype'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'cartype',
+            'dest': 'standard',
+            'conditions': 'is_going_to_standard'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'cartype',
+            'dest': 'business',
+            'conditions': 'is_going_to_business'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'cartype',
+            'dest': 'disable',
+            'conditions': 'is_going_to_disable'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'cartype',
+            'dest': 'free',
+            'conditions': 'is_going_to_free'
+        },
+        {
             'trigger': 'go_back',
             'source': [
                 'menu',
@@ -169,7 +204,11 @@ machine = TocMachine(
                 'chiayi',
                 'tainan',
                 'zuoying',
-                'web'
+                'web',
+                'standard',
+                'business',
+                'disable',
+                'free'
             ],
             'dest': 'user'
         }
