@@ -4,7 +4,6 @@ from utils import send_text_message
 from utils import THSRparse
 from utils import send_image_url
 
-print("\n\n\n\nfsm.py start\n")
 
 theDay=''
 startStation=''
@@ -42,7 +41,6 @@ class TocMachine(GraphMachine):
             return text.lower() == '時刻表查詢'
         else:
             sender_id = event['sender']['id']
-            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
             return False
 
     def is_going_to_date(self, event):
