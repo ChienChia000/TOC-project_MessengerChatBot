@@ -4,6 +4,7 @@ from utils import send_text_message
 from utils import THSRparse
 from utils import send_image_url
 
+print("\n\n\n\nfsm.py start\n")
 
 theDay=''
 startStation=''
@@ -29,7 +30,7 @@ class TocMachine(GraphMachine):
     def is_going_to_menu(self, event):
         if event['message'].get("text"):
             text = event['message']['text']
-            return text.lower() == '嗨'
+            return text.lower() != '時刻表查詢' and text.lower() != '車站資訊' and text.lower() != '車廂介紹' and text.lower() != '官方網站'
         else:
             sender_id = event['sender']['id']
             send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
@@ -41,6 +42,7 @@ class TocMachine(GraphMachine):
             return text.lower() == '時刻表查詢'
         else:
             sender_id = event['sender']['id']
+            #send_text_message(sender_id, "不好意思！我只看的懂文字訊息唷！")
             return False
 
     def is_going_to_date(self, event):
