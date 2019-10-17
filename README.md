@@ -1,5 +1,7 @@
 # Messenger Chatbot
 
+Theory of Computation class final project
+
 A Facebook messenger bot based on a finite state machine
 
 ## Setup
